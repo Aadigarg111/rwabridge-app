@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
+  <defs>
+    <linearGradient id="solana-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9945FF" />
+      <stop offset="100%" stop-color="#14F195" />
+    </linearGradient>
+  </defs>
+  <path d="M20 15 L40 15 L30 35 Z" fill="#9945FF" />
+  <path d="M50 15 L70 15 L60 35 Z" fill="#14F195" />
+  <text x="90" y="30" font-family="Arial" font-size="20" font-weight="bold" fill="url(#solana-gradient)">Solana</text>
+</svg>

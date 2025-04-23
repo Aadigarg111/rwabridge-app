@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9945FF" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#14F195" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="asset-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9945FF" />
+      <stop offset="100%" stop-color="#FD84D5" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- Physical Asset Representation -->
+  <rect x="100" y="150" width="200" height="300" rx="10" fill="#f5f5f5" stroke="#ddd" stroke-width="2" />
+  <rect x="120" y="180" width="160" height="100" fill="#e0e0e0" />
+  <rect x="120" y="300" width="70" height="30" fill="#e0e0e0" />
+  <rect x="120" y="350" width="160" height="20" fill="#e0e0e0" />
+  <rect x="120" y="380" width="160" height="20" fill="#e0e0e0" />
+  <rect x="120" y="410" width="100" height="20" fill="#e0e0e0" />
+  
+  <!-- Digital Token Representation -->
+  <circle cx="550" cy="300" r="150" fill="none" stroke="url(#asset-gradient)" stroke-width="8" stroke-dasharray="15,10" />
+  <rect x="500" y="150" width="200" height="300" rx="20" fill="rgba(255,255,255,0.9)" stroke="url(#asset-gradient)" stroke-width="3" />
+  <rect x="520" y="180" width="160" height="100" fill="rgba(153,69,255,0.1)" stroke="#9945FF" stroke-width="1" />
+  <rect x="520" y="300" width="70" height="30" fill="rgba(153,69,255,0.1)" stroke="#9945FF" stroke-width="1" />
+  <rect x="520" y="350" width="160" height="20" fill="rgba(153,69,255,0.1)" stroke="#9945FF" stroke-width="1" />
+  <rect x="520" y="380" width="160" height="20" fill="rgba(153,69,255,0.1)" stroke="#9945FF" stroke-width="1" />
+  <rect x="520" y="410" width="100" height="20" fill="rgba(153,69,255,0.1)" stroke="#9945FF" stroke-width="1" />
+  
+  <!-- Connection Animation -->
+  <path d="M300 300 C350 300, 400 250, 450 300 S550 350, 500 300" stroke="#14F195" stroke-width="3" fill="none" stroke-dasharray="10,5" />
+  
+  <!-- Blockchain Elements -->
+  <rect x="450" y="100" width="50" height="30" rx="5" fill="#9945FF" opacity="0.8" />
+  <rect x="510" y="100" width="50" height="30" rx="5" fill="#9945FF" opacity="0.8" />
+  <rect x="570" y="100" width="50" height="30" rx="5" fill="#9945FF" opacity="0.8" />
+  <line x1="500" y1="115" x2="510" y2="115" stroke="white" stroke-width="2" />
+  <line x1="560" y1="115" x2="570" y2="115" stroke="white" stroke-width="2" />
+  
+  <!-- Solana Logo Hint -->
+  <circle cx="400" cy="500" r="40" fill="none" stroke="#9945FF" stroke-width="2" />
+  <path d="M380 490 L420 490 L380 510 L420 510" stroke="#9945FF" stroke-width="2" fill="none" />
+</svg>

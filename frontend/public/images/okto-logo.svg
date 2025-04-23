@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
+  <defs>
+    <linearGradient id="okto-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B6B" />
+      <stop offset="100%" stop-color="#FF8E53" />
+    </linearGradient>
+  </defs>
+  <circle cx="25" cy="25" r="15" fill="url(#okto-gradient)" />
+  <text x="50" y="32" font-family="Arial" font-size="18" font-weight="bold" fill="#333">Okto</text>
+</svg>
