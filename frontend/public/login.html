@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - RWABridge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .auth-container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 40px;
+            border-radius: 12px;
+            background: rgba(18, 21, 34, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .auth-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #9945FF;
+            box-shadow: 0 0 0 2px rgba(153, 69, 255, 0.2);
+        }
+        
+        .auth-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .auth-footer a {
+            color: #9945FF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .auth-options {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .auth-option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .auth-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .auth-option i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .auth-option.phantom i {
+            color: #AB9FF2;
+        }
+        
+        .auth-option.solflare i {
+            color: #FC9965;
+        }
+        
+        .demo-notice {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(153, 69, 255, 0.1);
+            border-radius: 8px;
+            color: #9945FF;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="RWABridge Logo">
+                    <span>RWABridge</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#resources">Resources</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="login.html" class="btn btn-secondary active">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Form Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <h2>Login to RWABridge</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    
+                    <div class="auth-footer">
+                        <p>Don't have an account? <a href="register.html">Register</a></p>
+                        <p><a href="#">Forgot password?</a></p>
+                    </div>
+                </form>
+                
+                <div class="auth-options">
+                    <div class="auth-option phantom">
+                        <i class="fas fa-wallet"></i>
+                        <span>Connect Phantom</span>
+                    </div>
+                    <div class="auth-option solflare">
+                        <i class="fas fa-wallet"></i>
+                        <span>Connect Solflare</span>
+                    </div>
+                </div>
+                
+                <div class="demo-notice">
+                    <p>This is a demo version for the Solana Foundation & CoinDCX grant application</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="RWABridge Logo">
+                        <span>RWABridge</span>
+                    </div>
+                    <p>Bridging real-world assets to the Solana blockchain</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Whitepaper</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Compliance</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RWABridge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate login
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Logging in...';
+            submitButton.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Redirect to dashboard
+                window.location.href = 'dashboard.html';
+            }, 1500);
+        });
+        
+        // Wallet connection simulation
+        document.querySelectorAll('.auth-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const walletType = this.classList.contains('phantom') ? 'Phantom' : 'Solflare';
+                
+                // Show connecting state
+                const originalText = this.querySelector('span').textContent;
+                this.querySelector('span').textContent = 'Connecting...';
+                this.style.opacity = '0.7';
+                
+                // Simulate connection
+                setTimeout(() => {
+                    // Redirect to dashboard
+                    window.location.href = 'dashboard.html';
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
