@@ -148,27 +148,26 @@ document.addEventListener('DOMContentLoaded', function() {
     animateOnScroll(); // Run once on page load
     
     // Form Submission
-    const newsletterForm = document.querySelector('.newsletter-form');
+    const newsletterForm = document.getElementById('newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const emailInput = this.querySelector('input[type="email"]');
             if (emailInput && emailInput.value) {
                 // Show success message
-                const successMessage = document.createElement('p');
-                successMessage.textContent = 'Thank you for subscribing!';
-                successMessage.style.color = 'white';
-                successMessage.style.marginTop = '1rem';
+                document.getElementById('newsletter-success').style.display = 'block';
                 
-                // Replace form with success message
-                this.innerHTML = '';
-                this.appendChild(successMessage);
+                // Hide form
+                this.style.display = 'none';
+                
+                // Simulate sending to backend
+                console.log('Newsletter subscription:', emailInput.value);
             }
         });
     }
     
     // Demo Video Modal
-    const demoButton = document.querySelector('a[href="#"].btn-secondary.btn-large');
+    const demoButton = document.getElementById('watch-demo-btn');
     if (demoButton) {
         demoButton.addEventListener('click', function(e) {
             e.preventDefault();
@@ -181,7 +180,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="close-modal">&times;</span>
                     <h3>RWABridge Demo</h3>
                     <div class="video-container">
-                        <p>Demo video will be available soon.</p>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>This is a demo video showcasing the RWABridge platform functionality.</p>
                     </div>
                 </div>
             `;
